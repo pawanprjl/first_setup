@@ -17,24 +17,51 @@ apt install -y python3
 apt install -y python3-pip
 apt install -y python
 apt install -y python-pip
-apt install -y python-dnspython
-apt install -y git
-apt install -y rename
-apt install -y xargs
+apt install -y nano
+apt install -y curl
 
-
-echo "creating a tool folder for all tools to be installed"
-mkdir ~/tools
-cd ~/tools/
 
 echo "installing my favorite bash_profile aliases"
 git clone https://github.com/pawanprjl/bash_profile.git
 cd bash_profile
 mv bash_profile ~/.bashrc
 source ~/.bashrc
-cd ~/tools/
+rm -rf bash_profile
 echo "done"
 
 
-#install go
+echo "install go"
 apt install -y golang
+
+echo "installing ffuf" 
+go get github.com/ffuf/ffuf
+mv go /opt/
+ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
+echo "done installing ffuf"
+
+echo "installing subfinder"
+GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+cp -r go /opt/
+rm -rf go 
+ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
+echo "done installing subfinder"
+
+echo "installing dnsrecon"
+apt install -y dnsrecon
+
+echo "installing nmap"
+apt install -y nmap
+echo "done"
+
+
+echo "installing metasploit framework"
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
+  
+rm -f msfinstall
+echo "done"
+
+echo "installing searchsploit"
+apt install -y exploitdb
+echo "done"
