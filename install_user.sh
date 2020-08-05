@@ -17,10 +17,9 @@ sudo apt install -y python3
 sudo apt install -y python3-pip
 sudo apt install -y python
 sudo apt install -y python-pip
-sudo apt install -y python-dnspython
-sudo apt install -y git
-sudo apt install -y rename
-sudo apt install -y xargs
+sudo apt install -y nano
+sudo apt install -y curl
+sudo apt install -y wget
 
 
 echo "creating a tool folder for all tools to be installed"

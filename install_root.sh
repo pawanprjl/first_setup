@@ -19,7 +19,7 @@ apt install -y python
 apt install -y python-pip
 apt install -y nano
 apt install -y curl
-
+apt install -y wget
 
 echo "installing my favorite bash_profile aliases"
 git clone https://github.com/pawanprjl/bash_profile.git
