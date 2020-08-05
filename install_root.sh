@@ -65,3 +65,7 @@ echo "done"
 echo "installing searchsploit"
 apt install -y exploitdb
 echo "done"
+
+echo "installing gobuster"
+apt install -y gobuster
+echo "done"
