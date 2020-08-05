@@ -41,14 +41,14 @@ sudo apt install -y golang
 
 echo "installing ffuf" 
 sudo go get github.com/ffuf/ffuf
-sudo mv go /opt/
+sudo mv ~/go /opt/
 sudo ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
 echo "done installing ffuf"
 
 echo "installing subfinder"
 sudo GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
-sudo cp -r go /opt/
-sudo rm -rf go 
+sudo cp -r ~/go /opt/
+sudo rm -rf ~/go 
 sudo ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
 echo "done installing subfinder"
 

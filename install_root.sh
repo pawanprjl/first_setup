@@ -35,14 +35,14 @@ apt install -y golang
 
 echo "installing ffuf" 
 go get github.com/ffuf/ffuf
-mv go /opt/
+mv ~/go /opt/
 ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
 echo "done installing ffuf"
 
 echo "installing subfinder"
 GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
-cp -r go /opt/
-rm -rf go 
+cp -r ~/go /opt/
+rm -rf ~/go 
 ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
 echo "done installing subfinder"
 
