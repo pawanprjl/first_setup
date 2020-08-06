@@ -69,3 +69,17 @@ echo "done"
 echo "installing gobuster"
 apt install -y gobuster
 echo "done"
+
+
+echo "installing dnsutils"
+apt install -y dnsutils
+echo "done"
+
+
+
+echo "\n\n\n\n\n\n\n\n\ncleaning up now...\n\n\n\n\n\n\n\n\n"
+cd ~
+rm -rf ~/first_setup
+echo "done cleaning ... exiting ..."
+exit
+
