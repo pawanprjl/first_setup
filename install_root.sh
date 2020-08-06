@@ -76,6 +76,18 @@ apt install -y dnsutils
 echo "done"
 
 
+echo "setting up wordlists"
+mkdir ~/wordlist
+cd ~/wordlist/
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100.txt
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-10000.txt
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/DNS/namelist.txt
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/burp-parameter-names.txt
+wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt
+wget https://www.scrapmaker.com/data/wordlists/dictionaries/rockyou.txt
+git clone https://github.com/danielmiessler/SecLists.git
+cd ~/
+
 
 echo "\n\n\n\n\n\n\n\n\ncleaning up now...\n\n\n\n\n\n\n\n\n"
 cd ~
