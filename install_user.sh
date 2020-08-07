@@ -39,25 +39,19 @@ echo "done"
 sudo apt install -y golang
 
 cd ~/
-echo "installing ffuf" 
-sudo go get github.com/ffuf/ffuf
-sudo mv ~/go /opt/
-sudo ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
-echo "done installing ffuf"
-
-echo "installing subfinder"
-sudo GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
-sudo cp -r ~/go /opt/
-sudo rm -rf ~/go 
-sudo ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
-echo "done installing subfinder"
-
-echo "installing httpx"
+echo "installing ffuf, subfinder, httpx, waybackurls" 
+go get github.com/ffuf/ffuf
+GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 GO111MODULE=on go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
-sudo cp -r ~/go /opt/
-sudo rm -rf ~/go
+go get github.com/tomnomnom/waybackurls
+sudo mv ~/go /opt/
+#creating symlinks
+sudo ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
+sudo ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
 sudo ln -s /opt/go/bin/httpx /usr/local/sbin/httpx
-echo "done installing httpx"
+sudo ln -s /opt/go/bin/waybackurls /usr/local/sbin/waybackurls
+echo "done installing ffuf, subfinder, httpx, waybackurls"
+
 
 echo "installing dnsrecon"
 sudo apt install -y dnsrecon

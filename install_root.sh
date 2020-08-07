@@ -33,26 +33,20 @@ echo "done"
 echo "install go"
 apt install -y golang
 
-echo "installing ffuf" 
+cd ~/
+echo "installing ffuf, subfinder, httpx, waybackurls" 
 go get github.com/ffuf/ffuf
-mv ~/go /opt/
-ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
-echo "done installing ffuf"
-
-echo "installing subfinder"
 GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
-cp -r ~/go /opt/
-rm -rf ~/go 
-ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
-echo "done installing subfinder"
-
-
-echo "installing httpx"
 GO111MODULE=on go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
-cp -r ~/go /opt/
-rm -rf ~/go
+go get github.com/tomnomnom/waybackurls
+sudo mv ~/go /opt/
+#creating symlinks
+ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
+ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
 ln -s /opt/go/bin/httpx /usr/local/sbin/httpx
-echo "done installing httpx"
+ln -s /opt/go/bin/waybackurls /usr/local/sbin/waybackurls
+echo "done installing ffuf, subfinder, httpx, waybackurls"
+
 
 echo "installing dnsrecon"
 apt install -y dnsrecon
