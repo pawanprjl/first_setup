@@ -38,7 +38,7 @@ echo "done"
 #install go
 sudo apt install -y golang
 
-
+cd ~/
 echo "installing ffuf" 
 sudo go get github.com/ffuf/ffuf
 sudo mv ~/go /opt/
@@ -51,6 +51,13 @@ sudo cp -r ~/go /opt/
 sudo rm -rf ~/go 
 sudo ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
 echo "done installing subfinder"
+
+echo "installing httpx"
+GO111MODULE=on go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
+sudo cp -r ~/go /opt/
+sudo rm -rf ~/go
+sudo ln -s /opt/go/bin/httpx /usr/local/sbin/httpx
+echo "done installing httpx"
 
 echo "installing dnsrecon"
 sudo apt install -y dnsrecon

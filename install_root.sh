@@ -46,6 +46,14 @@ rm -rf ~/go
 ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
 echo "done installing subfinder"
 
+
+echo "installing httpx"
+GO111MODULE=on go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
+cp -r ~/go /opt/
+rm -rf ~/go
+ln -s /opt/go/bin/httpx /usr/local/sbin/httpx
+echo "done installing httpx"
+
 echo "installing dnsrecon"
 apt install -y dnsrecon
 
