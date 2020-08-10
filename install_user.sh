@@ -44,12 +44,20 @@ go get github.com/ffuf/ffuf
 GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 GO111MODULE=on go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
 go get github.com/tomnomnom/waybackurls
+go get github.com/michenriksen/aquatone
+go get -u github.com/tomnomnom/httprobe
+GO111MODULE=on go get -u -v github.com/lc/gau
+go get -u github.com/tomnomnom/qsreplace
 sudo mv ~/go /opt/
 #creating symlinks
 sudo ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
 sudo ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
 sudo ln -s /opt/go/bin/httpx /usr/local/sbin/httpx
 sudo ln -s /opt/go/bin/waybackurls /usr/local/sbin/waybackurls
+sudo ln -s /opt/go/bin/aquatone /usr/local/sbin/aquatone
+ln -s /opt/go/bin/httprobe /usr/local/sbin/httprobe
+ln -s /opt/go/bin/gau /usr/local/sbin/gau
+ln -s /opt/go/bin/qsreplace /usr/local/sbin/qsreplace
 echo "done installing ffuf, subfinder, httpx, waybackurls"
 
 
