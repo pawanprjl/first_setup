@@ -99,6 +99,13 @@ wget https://www.scrapmaker.com/data/wordlists/dictionaries/rockyou.txt
 git clone https://github.com/danielmiessler/SecLists.git
 cd ~/
 
+cd /opt
+git clone https://github.com/internetwache/GitTools.git
+ln -s /opt/GitTools/Dumper/gitdumper.sh /usr/local/sbin/gitdumper
+ln -s /opt/GitTools/Extractor/extractor.sh /usr/local/sbin/gitextractor
+ln -s /opt/GitTools/Finder/gitfinder.py /usr/local/sbin/gitfinder
+cd ~/
+
 
 echo "\n\n\n\n\n\n\n\n\ncleaning up now...\n\n\n\n\n\n\n\n\n"
 cd ~

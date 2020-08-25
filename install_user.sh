@@ -61,6 +61,7 @@ ln -s /opt/go/bin/qsreplace /usr/local/sbin/qsreplace
 echo "done installing ffuf, subfinder, httpx, waybackurls"
 
 
+
 echo "installing dnsrecon"
 sudo apt install -y dnsrecon
 
@@ -101,7 +102,12 @@ wget https://www.scrapmaker.com/data/wordlists/dictionaries/rockyou.txt
 git clone https://github.com/danielmiessler/SecLists.git
 cd ~/
 
-
+cd /opt
+sudo git clone https://github.com/internetwache/GitTools.git
+sudo ln -s /opt/GitTools/Dumper/gitdumper.sh /usr/local/sbin/gitdumper
+sudo ln -s /opt/GitTools/Extractor/extractor.sh /usr/local/sbin/gitextractor
+sudo ln -s /opt/GitTools/Finder/gitfinder.py /usr/local/sbin/gitfinder
+cd ~/
 
 echo "\n\n\n\n\n\n\n\n\ncleaning up now...\n\n\n\n\n\n\n\n\n"
 cd ~
