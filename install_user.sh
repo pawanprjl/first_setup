@@ -15,25 +15,25 @@ sudo apt install -y python-setuptools
 sudo apt install -y libldns-dev
 sudo apt install -y python3
 sudo apt install -y python3-pip
-sudo apt install -y python
-sudo apt install -y python-pip
 sudo apt install -y nano
 sudo apt install -y curl
 sudo apt install -y wget
 
-
-echo "creating a tool folder for all tools to be installed"
-mkdir ~/tools
-cd ~/tools/
 
 echo "installing my favorite bash_profile aliases"
 git clone https://github.com/pawanprjl/bash_profile.git
 cd bash_profile
 sudo mv bash_profile ~/.bashrc
 source ~/.bashrc
-cd ~/tools/
+sudo rm -rf bash_profile
 echo "done"
 
+
+#installing hashcat
+sudo apt install -y hashcat
+
+#installing john
+sudo apt install -y john
 
 #install go
 sudo apt install -y golang
@@ -90,17 +90,6 @@ echo "installing dnsutils"
 apt install -y dnsutils
 echo "done"
 
-echo "setting up wordlists"
-mkdir ~/wordlist
-cd ~/wordlist/
-wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100.txt
-wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-10000.txt
-wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/DNS/namelist.txt
-wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/burp-parameter-names.txt
-wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt
-wget https://www.scrapmaker.com/data/wordlists/dictionaries/rockyou.txt
-git clone https://github.com/danielmiessler/SecLists.git
-cd ~/
 
 cd /opt
 sudo git clone https://github.com/internetwache/GitTools.git

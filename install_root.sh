@@ -29,6 +29,12 @@ source ~/.bashrc
 rm -rf bash_profile
 echo "done"
 
+# install hashcat
+apt install -y hashcat
+
+#install john
+apt install -y john
+
 
 echo "install go"
 apt install -y golang
