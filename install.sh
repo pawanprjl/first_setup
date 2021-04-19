@@ -50,16 +50,28 @@ go get github.com/michenriksen/aquatone
 go get -u github.com/tomnomnom/httprobe
 GO111MODULE=on go get -u -v github.com/lc/gau
 go get -u github.com/tomnomnom/qsreplace
-sudo mv ~/go /opt/
+go get -u github.com/tomnomnom/anew
+go get -u github.com/tomnomnom/gron
+go get -u github.com/tomnomnom/assetfinder
+go get -u github.com/tomnomnom/hacks/html-tool
+go get -u github.com/tomnomnom/unfurl
+
 #creating symlinks
-ln -s /opt/go/bin/ffuf /usr/local/sbin/ffuf
-ln -s /opt/go/bin/subfinder /usr/local/sbin/subfinder
-ln -s /opt/go/bin/httpx /usr/local/sbin/httpx
-ln -s /opt/go/bin/waybackurls /usr/local/sbin/waybackurls
-ln -s /opt/go/bin/aquatone /usr/local/sbin/aquatone
-ln -s /opt/go/bin/httprobe /usr/local/sbin/httprobe
-ln -s /opt/go/bin/gau /usr/local/sbin/gau
-ln -s /opt/go/bin/qsreplace /usr/local/sbin/qsreplace
+ln -s ~/go/bin/ffuf /usr/local/sbin/ffuf
+ln -s ~/go/bin/subfinder /usr/local/sbin/subfinder
+ln -s ~/go/bin/httpx /usr/local/sbin/httpx
+ln -s ~/go/bin/waybackurls /usr/local/sbin/waybackurls
+ln -s ~/go/bin/aquatone /usr/local/sbin/aquatone
+ln -s ~/go/bin/httprobe /usr/local/sbin/httprobe
+ln -s ~/go/bin/gau /usr/local/sbin/gau
+ln -s ~/go/bin/qsreplace /usr/local/sbin/qsreplace
+ln -s ~/go/bin/anew /usr/local/sbin/anew
+ln -s ~/go/bin/gron /usr/local/sbin/gron
+ln -s ~/go/bin/assetfinder /usr/local/sbin/assetfinder
+ln -s ~/go/bin/html-tool /usr/local/sbin/html-tool
+ln -s ~/go/bin/unfurl /usr/local/sbin/unfurl
+
+
 echo "done installing ffuf, subfinder, httpx, waybackurls"
 
 
