@@ -55,6 +55,9 @@ go get -u github.com/tomnomnom/gron
 go get -u github.com/tomnomnom/assetfinder
 go get -u github.com/tomnomnom/hacks/html-tool
 go get -u github.com/tomnomnom/unfurl
+go get -u github.com/tomnomnom/hacks/inscope
+go get -u github.com/tomnomnom/meg
+go get -u github.com/tomnomnom/fff
 
 #creating symlinks
 ln -s ~/go/bin/ffuf /usr/local/sbin/ffuf
@@ -70,6 +73,9 @@ ln -s ~/go/bin/gron /usr/local/sbin/gron
 ln -s ~/go/bin/assetfinder /usr/local/sbin/assetfinder
 ln -s ~/go/bin/html-tool /usr/local/sbin/html-tool
 ln -s ~/go/bin/unfurl /usr/local/sbin/unfurl
+ln -s ~/go/bin/inscope /usr/local/sbin/inscope
+ln -s ~/go/bin/meg /usr/local/sbin/meg
+ln -s ~/go/bin/fff /usr/local/sbin/fff
 
 
 echo "done installing ffuf, subfinder, httpx, waybackurls"
